@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>userinfo</title>
+        <link rel="stylesheet" type="text/css" href="userinfo.css">
+    </head>
+<body>
+        <nav>
+        <div>
+     <form class="formmain" action="">
+    <label for="fname">First Name&nbsp;</label>
+    <input type="text" id="fname" name="firstname" ></br>
+
+    <label for="lname">Email-Id &nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="text" id="email" name="email" ></br>
+
+    <label for="Contact">Contact No:</label>
+    <input type="number" id="num" name="number"><br>
+    
+    <label for="dob">DateOfBirth</label>
+    <input type="text" id="dob" name="dob" ><br>
+    
+    <label for="country">SIET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="text" id="siet" name="siet" ></br>
+  
+	<label for="country">College ID &nbsp;&nbsp;</label>
+    <input type="text" id="clgid" name="clgid" ></br>
+    
+    <label for="country">Degree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="text" id="deg" name="degree" ></br>
+</nav>
+    
+
+  
+
+<h1>Please read the instruction carefully </h1>
+</div>
+<a href="starttest.html"><input type="button" value="start" class="start" data-toggle-fullscreen></a>
+        
+<script>
+    if (!Element.prototype.requestFullscreen) {
+Element.prototype.requestFullscreen = Element.prototype.mozRequestFullscreen || Element.prototype.webkitRequestFullscreen || Element.prototype.msRequestFullscreen;
+}
+
+
+if (!document.exitFullscreen) {
+document.exitFullscreen = document.mozExitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen;
+}
+
+if (!document.fullscreenElement) {
+
+Object.defineProperty(document, 'fullscreenElement', {
+get: function() {
+    return document.mozFullScreenElement || document.msFullscreenElement || document.webkitFullscreenElement;
+}
+});
+
+Object.defineProperty(document, 'fullscreenEnabled', {
+get: function() {
+    return document.mozFullScreenEnabled || document.msFullscreenEnabled || document.webkitFullscreenEnabled;
+}
+});
+}
+
+document.addEventListener('click', function (event) {
+
+
+if (!event.target.hasAttribute('data-toggle-fullscreen')) return;
+
+
+if (document.fullscreenElement) {
+document.exitFullscreen();
+} else {
+document.documentElement.requestFullscreen();
+}
+
+}, false);</script>
+
+
+
+</div>
+</div>
+<div class="footer shadow2">
+</div>
+
+</body>
+</html>
